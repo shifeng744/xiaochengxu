@@ -1,0 +1,26 @@
+<view class="top">
+  <image src="/images/logo.jpg"></image>
+  <text>我爱你</text>
+</view>
+<view class="content" wx:for="{{arr}}">
+  <view class="title">
+    <view class="line"></view>
+    <text>{{item.title}}</text>
+  </view>
+  <text class="text">{{item.content}}</text>
+</view>
+
+<view class="music">
+  <image bindtap="playmusic" src="/images/bgmBtn-fbd2dc.svg" class="{{off ? 'rotat' : ' '}}"></image>
+ </view>
+<view class="kf">
+  <block wx:for="{{[1,2,3,454,6,7,8,9,10,12,454,6,7,8,9,7,8,9]}}">
+       <contact-button 
+  type="default-light" 
+  size="20"
+  session-from="weapp"
+>
+</contact-button>
+  </block>
+  <text>点我</text>
+</view>

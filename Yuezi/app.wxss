@@ -1,0 +1,17 @@
+.title{
+  font-size: 48rpx;
+  color: #6a6a6a;
+  font-weight: bold;
+  line-height: 60rpx;
+
+}
+.titlefu{
+  font-size:27rpx;
+  color: #9f9f9f;
+  font-weight: bold;
+  line-height: 60rpx;
+}
+.container{
+  margin: 0rpx 40rpx;
+  border-bottom: 2rpx solid #ccc;
+}

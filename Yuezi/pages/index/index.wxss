@@ -1,0 +1,21 @@
+
+.page{
+  margin:60rpx 0; 
+}
+.page .container{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30rpx;
+}
+.page .container .bot{
+  display: flex;
+  justify-content: space-between;
+}
+.page .container .bot image{
+  width: 218rpx;
+  height: 218rpx;
+  
+}
+.page .container .bot image+image{
+  padding-left: 5rpx;
+}

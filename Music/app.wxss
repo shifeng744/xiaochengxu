@@ -1,0 +1,5 @@
+page{
+  font-family: "微软雅黑";
+  font-size: 37rpx;
+  background: #f4f4f4;
+}

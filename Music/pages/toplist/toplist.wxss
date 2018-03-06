@@ -1,0 +1,45 @@
+/* toplist.wxss */
+page{
+  background: #000;
+  color:#fff;
+  font-weight: 300;
+}
+.top-top .top-img image{
+  width: 100%
+}
+.top-top .top-cont{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40rpx;
+}
+.top-top .top-cont .h1{
+  font-size: 60rpx;
+}
+.list{
+  border-top: 1rpx solid #333;
+}
+.list .popular{
+  display: flex;
+}
+.list .popular .left{
+
+  font-size: 50rpx;
+  padding: 50rpx 60rpx;
+
+}
+.list .popular .right{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0rpx;
+  line-height: 50rpx;
+  border-bottom: 1rpx solid #333;
+  margin-top: 20rpx;
+  width: 100%;
+}
+.list .popular .right .songname{
+  font-size: 45rpx;
+}
+.list .popular .right .songername{
+  font-size: 35rpx;
+  color: #ccc;
+}

@@ -1,0 +1,24 @@
+<import src="../../template/list/list.wxml"/>
+<template is="msgItem"/>
+<view class="dtai-list container">
+    <view class="container" bindtap="openMap">
+    <image src="/images/icon_map.png"></image>
+    <text>{{dtaiList.map}}</text>
+    <image src="/images/icon_jt.png"></image>
+  </view>
+    <view class="container">
+    <image src="/images/icon_map.png"></image>
+    <text>{{dtaiList.timer}}</text>
+    <image src="/images/icon_jt.png"></image>
+  </view>
+    <view class="container">
+    <image src="/images/icon_map.png"></image>
+    <text>{{dtaiList.tel}}</text>
+    <image src="/images/icon_jt.png"></image>
+  </view>
+   <view class="item">
+     <text class="text">相册</text>
+  </view>
+  <view class="prevCE " >
+    <image data-prindex="{{index}}" bindtap="adtu" wx:for="{{prevview}}" src="{{item}}"></image>  </view>
+</view>

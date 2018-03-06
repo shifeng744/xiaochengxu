@@ -1,0 +1,66 @@
+<view class="nav">
+  <text bindtap="tab" class="{{navcur == index ? 'cur' : ''}}" wx:for="{{navlist}}" data-navId="{{index}}">{{item}}</text>
+</view>
+<view hidden="{{navcur != 0}}">
+    <!--轮播  -->
+    <swiper
+      indicator-dots="{{true}}"
+      circular="{{true}}"
+      autoplay="{{true}}"
+      interval="2000"
+    >
+        <swiper-item wx:for="{{slider}}">
+              <image src="{{item.picUrl}}"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view hidden="{{navcur !== 1}}">
+    <view class="container">
+      <view bindtap="openToplist" class="con-list" wx:for="{{topList}}" data-id="{{item.id}}">
+        <view class="left">
+          <image src="{{item.picUrl}}"></image>
+        </view>
+        <view class="right">
+          <text class="title">{{item.topTitle}}</text>
+          <text class="bin" wx:for="{{item.songList}}">
+            <text class="nubmer">{{index+1}}</text>
+            <text class="songname">{{item.songname}}</text>
+            <text class="songer">- {{item.singername}}</text>
+          </text>
+        </view>
+      </view>
+    </view>
+</view>
+<view hidden="{{navcur !== 2}}">
+    <view class="search">
+      <view class="search-bar">
+        <view class="search-wrap">
+            <icon type="search" size="16" class="icon-search" />
+            <input type="search" placeholder="搜索歌曲、歌单、专辑" class="search-input" bindinput="bindKeywordInput" />
+        </view>
+        <view class="search-cancel" bindtap="searchResult">搜索</view>
+      </view>
+      <view class="search-hot" hidden="{{searchKey}}">
+        <text class="hot-title">热门搜索</text>
+        <view class="hot-wrap">
+          <text class="hot-item" bindtap="hotkeyTap" data-text="{{hotkey.special}}" wx:for="{{gethotkey}}">{{item.k}}</text>
+         
+
+        </view>
+      </view>
+      <view class="lxhc" wx:for="{{list}}">
+        {{item.content}}
+      </view>
+
+      <!-- 搜索展示结果 -->
+       <scroll-view scroll-y="true" style="height: 990rpx;" hidden="{{!searchKey}}" bindscrolltolower="lower">
+
+         <view class="result-item" wx:for="{{searchList}}" bindtap="openPlayMusic" data-searchid="{{index}}">
+              {{item.songname}} -歌手：{{item.singer[0].name}}
+          </view> 
+
+       </scroll-view> 
+
+
+    </view>
+</view>

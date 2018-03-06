@@ -1,0 +1,13 @@
+<view class="page" wx:for="{{list}}" data-index="{{index}}" bindtap="opendTAI">
+  <view class="container">
+    <text class="title">{{item.title}}</text>
+     <text class="titlefu">{{item.content}}</text>
+
+    <view class="bot" wx:if="{{item.off}}">
+      <image src="/images/ys_01.jpg"></image>
+      <image src="/images/ys_02.jpg"></image>
+      <image src="/images/ys_03.jpg"></image>
+    </view>
+  
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<view class="top-top">
+  <view class="top-img"><image src="{{topinfo.pic_album}}"></image></view>
+  <view class="top-cont">
+    <text class="h1">{{topinfo.ListName}}</text>
+    <text class="h2">{{update_time.update_time}} 更新</text>
+  </view>
+</view>
+
+<view class="list" >
+  <view class="popular" wx:for="{{songlist}}" bindtap="openplaysong" data-idgg="{{index}}" wx:key="fg">
+    <view class="left">{{index+1}}</view>
+    <view class="right">
+      <text class="songname">{{item.data.songname}}</text>
+      <text class="songername">{{item.data.albumname}}</text>
+    </view>
+  </view>
+
+  
+</view>
